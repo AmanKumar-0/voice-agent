@@ -1,0 +1,10 @@
+livekit
+livekit-agents[silero,turn-detector,deepgram,openai,cartesia,bey]~=1.3
+livekit-plugins-noise-cancellation~=0.2
+python-dotenv
+supabase
+pytz
+fastapi
+uvicorn
+websockets
+pydantic

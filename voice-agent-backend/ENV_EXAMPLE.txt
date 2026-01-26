@@ -1,0 +1,44 @@
+# LiveKit Configuration
+LIVEKIT_URL=wss://your-livekit-server.com
+LIVEKIT_API_KEY=your-api-key
+LIVEKIT_API_SECRET=your-api-secret
+
+# Speech Services
+DEEPGRAM_API_KEY=your-deepgram-api-key
+CARTESIA_API_KEY=your-cartesia-api-key
+
+# LLM Provider Configuration
+# Choose one: openai, openrouter, together, ollama
+LLM_PROVIDER=openrouter
+
+# OpenAI (if LLM_PROVIDER=openai)
+OPENAI_API_KEY=your-openai-api-key
+# OPENAI_BASE_URL=https://api.openai.com/v1  # Optional
+
+# OpenRouter (if LLM_PROVIDER=openrouter) - Recommended for free tier
+OPENROUTER_API_KEY=sk-or-v1-your-key
+# LLM_MODEL=meta-llama/llama-3.1-70b-instruct  # Optional
+
+# Together AI (if LLM_PROVIDER=together) - Recommended for free tier
+TOGETHER_API_KEY=your-together-api-key
+# LLM_MODEL=meta-llama/Llama-3.1-70B-Instruct-Turbo  # Optional
+
+# Ollama (if LLM_PROVIDER=ollama) - Local, free, no limits
+OLLAMA_BASE_URL=http://localhost:11434  # Default
+OLLAMA_MODEL=llama3.2  # Optional, defaults to llama3.2
+
+# LLM Settings (optional)
+# LLM_MODEL=  # Leave empty to use provider default
+LLM_TEMPERATURE=0.7
+
+# Database
+SUPABASE_URL=your-supabase-url
+SUPABASE_KEY=your-supabase-key
+
+# Avatar Service (optional, used by frontend)
+BEYOND_PRESENCE_API_KEY=your-beyond-presence-api-key
+# TAVUS_API_KEY=your-tavus-api-key
+
+# Server Configuration
+PORT=8080
+HOST=0.0.0.0
