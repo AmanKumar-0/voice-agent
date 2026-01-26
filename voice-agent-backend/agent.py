@@ -91,8 +91,6 @@ async def my_agent(ctx: JobContext):
     # Create agent instance
     agent = AppointmentAgent(state, ctx)
     
-    # Set up avatar
-    avatar_session = await setup_avatar(session, ctx.room)
 
     # Start the session
     await session.start(
@@ -107,6 +105,8 @@ async def my_agent(ctx: JobContext):
         ),
     )
     
+    # Set up avatar
+    avatar_session = await setup_avatar(session, ctx.room)
     # Set up room listeners
     setup_room_listeners(ctx.room, state)
     
