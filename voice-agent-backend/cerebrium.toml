@@ -1,0 +1,27 @@
+[cerebrium.deployment]
+name = "voice-agent"
+python_version = "3.11"
+docker_base_image_url = "debian:bookworm-slim"
+disable_auth = false
+# Include only the agent backend files so this deployment runs the agent, not the FastAPI
+include = ['./voice-agent-backend/**', './voice-agent-backend/run.py', 'cerebrium.toml']
+exclude = ['.*']
+
+[cerebrium.hardware]
+cpu = 2
+memory = 8.0
+compute = "CPU"
+
+[cerebrium.scaling]
+min_replicas = 1
+max_replicas = 5
+cooldown = 30
+replica_concurrency = 1
+response_grace_period = 900
+scaling_metric = "cpu_utilization"
+scaling_target = 60
+
+[cerebrium.runtime.custom]
+port = 8081
+# Start command runs the agent's entrypoint script in the backend folder
+start_command = "python voice-agent-backend/run.py dev"
