@@ -3,6 +3,8 @@ name = "voice-agent"
 python_version = "3.11"
 docker_base_image_url = "debian:bookworm-slim"
 disable_auth = false
+# Custom Dockerfile runs the LiveKit agent (python run.py dev) instead of default Uvicorn + main
+dockerfile_path = "Dockerfile"
 # Project root = voice-agent-backend: include everything here so main.py and agent code are in the bundle
 include = ['./**', 'cerebrium.toml']
 exclude = ['.*']
@@ -23,5 +25,5 @@ scaling_target = 60
 
 [cerebrium.runtime.custom]
 port = 8081
-# Run the LiveKit agent (project root = voice-agent-backend, so run.py is at container root)
-entrypoint = ["python", "run.py", "dev"]
+dockerfile_path = "./Dockerfile"
+# Start command is set in Dockerfile CMD; main.py still required for Cerebrium's __import__("main")
