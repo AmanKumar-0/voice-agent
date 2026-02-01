@@ -4,7 +4,8 @@ python_version = "3.11"
 docker_base_image_url = "debian:bookworm-slim"
 disable_auth = false
 # Include only the agent backend files so this deployment runs the agent, not the FastAPI
-include = ['./voice-agent-backend/**', './voice-agent-backend/run.py', 'cerebrium.toml']
+# main.py is required by Cerebrium's server (import main) and provides a minimal app/health
+include = ['./voice-agent-backend/**', './voice-agent-backend/run.py', './main.py', 'cerebrium.toml']
 exclude = ['.*']
 
 [cerebrium.hardware]
@@ -23,5 +24,5 @@ scaling_target = 60
 
 [cerebrium.runtime.custom]
 port = 8081
-# Start command runs the agent's entrypoint script in the backend folder
-start_command = "python voice-agent-backend/run.py dev"
+# Run the LiveKit agent; use entrypoint (array) so Cerebrium uses this instead of default uvicorn + main
+entrypoint = ["python", "voice-agent-backend/run.py", "dev"]
