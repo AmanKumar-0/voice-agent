@@ -95,6 +95,7 @@ class Config:
             cls.CARTESIA_API_KEY,
             cls.SUPABASE_URL,
             cls.SUPABASE_KEY,
+            cls.OPENROUTER_API_KEY,
         ]
         
         # Validate LLM provider configuration
