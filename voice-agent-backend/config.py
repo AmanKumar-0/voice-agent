@@ -96,6 +96,7 @@ class Config:
             cls.SUPABASE_URL,
             cls.SUPABASE_KEY,
             cls.OPENROUTER_API_KEY,
+            cls.LLM_PROVIDER
         ]
         
         # Validate LLM provider configuration
