@@ -29,7 +29,7 @@ class Config:
     ANTHROPIC_API_KEY: Optional[str] = os.getenv("ANTHROPIC_API_KEY")
     
     # OpenRouter
-    OPENROUTER_API_KEY: Optional[str] = os.getenv("OPENROUTER_API_KEY")
+    OPENROUTER_API_KEY: Optional[str] = os.getenv("OPENROUTER_API_KEY","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")
     OPENROUTER_BASE_URL: str = os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1")
     
     # Together AI
