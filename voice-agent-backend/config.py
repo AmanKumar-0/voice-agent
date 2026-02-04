@@ -43,8 +43,8 @@ class Config:
     OLLAMA_MODEL: str = os.getenv("OLLAMA_MODEL", "qwen2.5:7b")  # Default model
     
     # Database
-    SUPABASE_URL: str = os.getenv("SUPABASE_URL", "")
-    SUPABASE_KEY: str = os.getenv("SUPABASE_KEY", "")
+    SUPABASE_URL: str = os.getenv("SUPABASE_URL", "https://xfkhrjlffkimiubzdcwi.supabase.co")
+    SUPABASE_KEY: str = os.getenv("SUPABASE_KEY", "sb_publishable_ZiOCRh0kKP3g4rYE7nFlVw_d2ZIHa7n")
     
     # Avatar Service (Beyond Presence)
     BEYOND_PRESENCE_API_KEY: Optional[str] = os.getenv("BEYOND_PRESENCE_API_KEY")

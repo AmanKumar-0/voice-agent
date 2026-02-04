@@ -13,6 +13,7 @@ class Database:
     
     def __init__(self):
         """Initialize Supabase client."""
+        print(Config.SUPABASE_URL, Config.SUPABASE_KEY)
         self.client: Client = create_client(Config.SUPABASE_URL, Config.SUPABASE_KEY)
         self.table = "appointments"
     
