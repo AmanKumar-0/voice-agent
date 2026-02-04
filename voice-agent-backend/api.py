@@ -76,7 +76,7 @@ async def generate_token(request: TokenRequest):
             
             # Create LiveKit API client
             lkapi = lk_api.LiveKitAPI(
-                url=Config.LIVEKIT_URL.replace("wss://", "https://").replace("ws://", "http://"),
+                url=Config.LIVEKIT_URL,
                 api_key=Config.LIVEKIT_API_KEY,
                 api_secret=Config.LIVEKIT_API_SECRET
             )

@@ -232,6 +232,7 @@ LLM_MODEL=meta-llama/llama-3.1-70b-instruct
 ```
 
 **Free Models:**
+
 - `google/gemini-flash-1.5-8b`
 - `meta-llama/llama-3.2-3b-instruct`
 - `qwen/qwen-2.5-7b-instruct`
@@ -261,6 +262,7 @@ OLLAMA_MODEL=qwen2.5:7b
 ```
 
 **Setup:**
+
 1. Install Ollama: https://ollama.ai
 2. Pull a model: `ollama pull qwen2.5:7b`
 3. Start Ollama: `ollama serve` (runs on port 11434)
@@ -300,6 +302,7 @@ The API server runs on port 8080 (configurable via `PORT` env var).
 Health check endpoint.
 
 **Response:**
+
 ```json
 {
   "status": "healthy"
@@ -311,6 +314,7 @@ Health check endpoint.
 Generate LiveKit access token for frontend connection.
 
 **Request:**
+
 ```json
 {
   "room_name": "appointment-room",
@@ -319,6 +323,7 @@ Generate LiveKit access token for frontend connection.
 ```
 
 **Response:**
+
 ```json
 {
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
@@ -387,6 +392,7 @@ WantedBy=multi-user.target
 #### Agent not connecting to room
 
 **Solutions:**
+
 1. Check LiveKit dashboard - verify agent worker is registered
 2. Verify `LIVEKIT_URL`, `LIVEKIT_API_KEY`, `LIVEKIT_API_SECRET` are correct
 3. Check agent logs for errors
@@ -395,6 +401,7 @@ WantedBy=multi-user.target
 #### LLM errors
 
 **"Failed to create LLM"**
+
 - Check API key is set correctly
 - Verify model name is correct for provider
 - For Ollama: Ensure `ollama serve` is running
@@ -402,6 +409,7 @@ WantedBy=multi-user.target
 #### Database errors
 
 **"Connection failed"**
+
 - Verify `SUPABASE_URL` and `SUPABASE_KEY` are correct
 - Check Supabase project is active
 - Verify table schema matches

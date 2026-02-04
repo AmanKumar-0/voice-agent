@@ -5,10 +5,12 @@
 Railway doesn't use Procfile. You need to create **two separate services** in Railway:
 
 ### Service 1: API
+
 - **Start Command**: `python start_api.py`
 - **Port**: Railway will auto-assign (use `PORT` env var)
 
-### Service 2: Worker  
+### Service 2: Worker
+
 - **Start Command**: `python run.py`
 - **Port**: Not needed (no HTTP server)
 
