@@ -10,8 +10,9 @@ from models.conversation_state import ConversationState
 from database import Database
 from utils import format_appointment_summary
 from config import Config
-
+from dotenv import load_dotenv
 logger = logging.getLogger(__name__)
+load_dotenv()
 db = Database()
 
 

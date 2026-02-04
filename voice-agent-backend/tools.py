@@ -11,9 +11,10 @@ from utils import (
     format_appointment_summary
 )
 import logging
+from dotenv import load_dotenv
 
 logger = logging.getLogger(__name__)
-
+load_dotenv()
 db = Database()
 
 
