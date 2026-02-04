@@ -11,4 +11,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Run the LiveKit agent; Cerebrium may still start its server, so main.py must exist for import
-CMD ["python", "run.py", "dev"]
+# Cloud Run sets PORT env var, default to 8080 if not set
+CMD ["sh", "-c", "python run.py dev --port ${PORT:-8080}"]
