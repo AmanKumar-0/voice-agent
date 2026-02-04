@@ -10,13 +10,13 @@ class Config:
     """Application configuration."""
     
     # LiveKit
-    LIVEKIT_URL: str = os.getenv("LIVEKIT_URL", "")
-    LIVEKIT_API_KEY: str = os.getenv("LIVEKIT_API_KEY", "")
-    LIVEKIT_API_SECRET: str = os.getenv("LIVEKIT_API_SECRET", "")
+    LIVEKIT_URL: str = os.getenv("LIVEKIT_URL", "wss://test-hy6mzzhm.livekit.cloud")
+    LIVEKIT_API_KEY: str = os.getenv("LIVEKIT_API_KEY", "API5BcCPyEYqFHv")
+    LIVEKIT_API_SECRET: str = os.getenv("LIVEKIT_API_SECRET", "GEsyXJu0r18YlZ1awXK8yKGrxDmuL7dFcpmCekA99HY")
     
     # Speech Services
-    DEEPGRAM_API_KEY: str = os.getenv("DEEPGRAM_API_KEY", "")
-    CARTESIA_API_KEY: str = os.getenv("CARTESIA_API_KEY", "")
+    DEEPGRAM_API_KEY: str = os.getenv("DEEPGRAM_API_KEY", "639847281699941794392717313243240605624")
+    CARTESIA_API_KEY: str = os.getenv("CARTESIA_API_KEY", "sk-carte-490643054054218150173535051406341320010")
     
     # LLM Provider Configuration
     LLM_PROVIDER: str = os.getenv("LLM_PROVIDER", "openrouter").lower()  # openai, openrouter, together, ollama (default: ollama for local)
